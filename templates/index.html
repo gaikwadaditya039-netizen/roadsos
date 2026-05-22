@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RoadSoS Emergency Assistant</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+
+    <!-- 🔴 REPLACE YOUR API KEY HERE -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNFFt1hy5Sm5lUPnJtL2ihcZP6TdDgQsc&libraries=places"></script>
+</head>
+
+<body>
+
+<div class="container text-center mt-4">
+
+    <h1 class="text-danger">🚨 RoadSoS Emergency Assistant</h1>
+
+    <div id="chatbox"></div>
+
+    <input type="text" id="userInput" class="form-control mt-2" placeholder="Type or speak...">
+
+    <br>
+
+    <button class="btn btn-primary" onclick="sendMessage()">Send</button>
+    <button class="btn btn-warning" onclick="startVoice()">🎤 Speak</button>
+
+    <br><br>
+
+    <button class="btn btn-success" onclick="getLocation()">📍 Get Help Near Me</button>
+    <button class="btn btn-danger" onclick="callAmbulance()">🚑 Call Ambulance</button>
+
+    <br><br>
+
+    <div id="map"></div>
+
+</div>
+
+<script src="/static/script.js"></script>
+
+</body>
+</html>
